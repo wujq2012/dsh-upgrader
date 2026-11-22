@@ -1,0 +1,45 @@
+{
+  "name": "dsh-upgrader",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Web-version DSH updater with the desktop app's own update capsule: the official DesktopUpdateIndicator is enabled inside the web GUI and backed by real npm dist-tag checks plus a stop-host / npm install / relaunch upgrade helper.",
+  "license": "MIT",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "updater",
+    "update",
+    "web"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.2.2-alpha.3 <0.3.0-0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wujq2012/dsh-upgrader.git"
+  },
+  "homepage": "https://github.com/wujq2012/dsh-upgrader#readme",
+  "bugs": {
+    "url": "https://github.com/wujq2012/dsh-upgrader/issues"
+  },
+  "author": "wujq2012"
+}

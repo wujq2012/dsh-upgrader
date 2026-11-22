@@ -1,0 +1,10 @@
+# dsh-upgrader bundle patch
+#
+# One insert row; the bundle package is also the plugin module.
+- insert:
+    - id: desktop-updater-for-web
+      name: dsh-upgrader
+      config:
+        channel: latest
+        checkOnStart: true
+        checkIntervalHours: 6
